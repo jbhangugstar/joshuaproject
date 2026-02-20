@@ -7,14 +7,26 @@ class Tugas4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Brilliant Education", style: TextStyle(fontSize: 30)),
+        title: Text(
+          "Brilliant Education",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 179, 9, 111),
+        backgroundColor: Colors.purpleAccent,
       ),
 
       body: ListView(
         children: [
-          Text("FORM PENDAFTARAN TUTOR"),
+          Text(
+            "FORM PENDAFTARAN TUTOR",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          ),
+
           TextField(
             decoration: InputDecoration(
               labelText: "NAMA LENGKAP : ",
@@ -60,14 +72,21 @@ class Tugas4 extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-
-          ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Colors.green,
-              child: Icon(Icons.school),
+          // Tutor 1
+          SizedBox(height: 20),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.purpleAccent,
             ),
-            title: Text("Adam"),
-            subtitle: Text(" Tutor App Developer"),
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.green,
+                child: Icon(Icons.school),
+              ),
+              title: Text("Adam"),
+              subtitle: Text(" Tutor App Developer"),
+            ),
           ),
           ListTile(
             leading: CircleAvatar(

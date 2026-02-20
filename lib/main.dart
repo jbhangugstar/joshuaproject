@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_8/tugas3.dart';
-import 'package:joshuaproject/Day_8/tugas4.dart';
-import 'package:joshuaproject/day_7/day_7.dart';
-import 'package:joshuaproject/ngulik/ngulik.dart';
+import 'package:joshuaproject/Day_10/tugas5.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas4(),
+      home: Tugas5(),
     );
   }
 }
