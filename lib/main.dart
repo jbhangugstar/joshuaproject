@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:joshuaproject/Day_10/tugas5.dart';
+import 'package:joshuaproject/Day_11/tugas6_homepage2.dart';
+import 'package:joshuaproject/Day_11/tugas6.dart';
+import 'package:joshuaproject/Day_11/tugas6_homepage.dart';
+import 'package:joshuaproject/Day_8/tugas4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas5(),
+      home: Tugas6Login(),
     );
   }
 }
