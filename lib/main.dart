@@ -3,6 +3,11 @@ import 'package:joshuaproject/Day_10/tugas5.dart';
 import 'package:joshuaproject/Day_11/tugas6_homepage2.dart';
 import 'package:joshuaproject/Day_11/tugas6.dart';
 import 'package:joshuaproject/Day_11/tugas6_homepage.dart';
+import 'package:joshuaproject/Day_12/datapickerpage.dart';
+import 'package:joshuaproject/Day_12/dropdownpage.dart';
+import 'package:joshuaproject/Day_12/switchpage.dart';
+import 'package:joshuaproject/Day_12/timepickerpage.dart';
+import 'package:joshuaproject/Day_12/tugas7.dart';
 import 'package:joshuaproject/Day_8/tugas4.dart';
 
 void main() {
@@ -35,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas6Login(),
+      home: Tugas7Flutter(),
     );
   }
 }
