@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DataPickerPage extends StatefulWidget {
-  const DataPickerPage({super.key});
+class DatePickerPage extends StatefulWidget {
+  const DatePickerPage({super.key});
 
   @override
-  State<DataPickerPage> createState() => _DatePickerPageState();
+  State<DatePickerPage> createState() => _DatePickerPageState();
 }
 
-class _DatePickerPageState extends State<DataPickerPage> {
+class _DatePickerPageState extends State<DatePickerPage> {
   DateTime? selectedDate;
 
   // Function untuk membuka date picker

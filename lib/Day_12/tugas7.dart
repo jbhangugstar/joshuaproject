@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:joshuaproject/Day_12/checkboxpage.dart';
-import 'package:joshuaproject/Day_12/datapickerpage.dart';
+import 'package:joshuaproject/Day_12/datepickerpage.dart';
 import 'package:joshuaproject/Day_12/dropdownpage.dart';
 import 'package:joshuaproject/Day_12/switchpage.dart';
 import 'package:joshuaproject/Day_12/timepickerpage.dart';
@@ -42,7 +42,7 @@ class _Tugas7FlutterState extends State<Tugas7Flutter> {
     Tugas7Checkbox(),
     Switchpage(),
     DropDownPage(),
-    DataPickerPage(),
+    DatePickerPage(),
     TimePickerPage(),
   ];
 
