@@ -8,6 +8,7 @@ import 'package:joshuaproject/Day_12/dropdownpage.dart';
 import 'package:joshuaproject/Day_12/switchpage.dart';
 import 'package:joshuaproject/Day_12/timepickerpage.dart';
 import 'package:joshuaproject/Day_12/tugas7.dart';
+import 'package:joshuaproject/Day_12/tugas8.dart';
 import 'package:joshuaproject/Day_8/tugas4.dart';
 
 void main() {
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Tugas7Flutter(),
+      home: Tugas8Flutter(),
     );
   }
 }
