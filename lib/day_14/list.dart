@@ -17,7 +17,7 @@ class ListViewBuilderDay14List extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       itemBuilder: (BuildContext context, int index) {
         return Container(
-          margin: EdgeInsets.only(bottom: 10),
+          margin: EdgeInsets.only(bottom: 20),
           height: 40,
           color: Colors.amber,
           child: Text("$index : ${dataProduk[index]}"),

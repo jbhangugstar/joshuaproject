@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:joshuaproject/day_14/list.dart';
 import 'package:joshuaproject/day_14/list_map.dart';
+import 'package:joshuaproject/day_14/model_tutor.dart';
 
 class DrawerGlobalTugas9 extends StatefulWidget {
   const DrawerGlobalTugas9({super.key});
@@ -17,7 +19,11 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
     Navigator.pop(context);
   }
 
-  static List<Widget> listWidget = [ListMapPageTugas9()];
+  static List<Widget> listWidget = [
+    ListViewBuilderDay14List(),
+    ListMapPageTugas9(),
+    ModelListViewBuilderDay14(),
+  ];
 
   @override
   Widget build(BuildContext context) {

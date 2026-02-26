@@ -5,15 +5,15 @@ class ListMapPageTugas9 extends StatelessWidget {
 
   final List<Map<String, dynamic>> dataUser = [
     {
-      "NAMA TUTOR": "Keisyha Wijaya Salim",
+      "Nama Tutor": "Keisyha Wijaya Salim",
       "Bidang Studi": "Bisnis",
       "Hobi": "Nonton Drakor",
       "Pendidikan": "Sarjana Manajemen",
       "foto":
-          "https://media.istockphoto.com/id/1473839183/id/foto/wanita-muda-asia-yang-tersenyum-cantik-berusia-sekitar-25-tahun-dengan-kemeja-cokelat-wanita.jpg?s=1024x1024&w=is&k=20&c=_bMd70VZOmRHrmXRTIIaFlpYAyrqgEeZFD7J4aMqvtM=",
+          "https://media.istockphoto.com/id/1473839183/id/foto/wanita-muda-asia-yang-tersenyum-cantik-berusia-sekitar-25-tahun-dengan-kemeja-cokelat-wanita.jpg?s=1024x1024&w=is&k=20&c=_bMd70VZOmRHrmXRTIIaFlpYAyrqgEeZFD7J4aMqvtM",
     },
     {
-      "NAMA TUTOR": "Andi Pratama",
+      "Nama tutor": "Andi Pratama",
       "Bidang Studi": "Akuntansi",
       "Hobi": "Membaca Buku",
       "Pendidikan": "Sarjana Akuntansi",
@@ -21,7 +21,7 @@ class ListMapPageTugas9 extends StatelessWidget {
           "https://www.quipper.com/id/blog/wp-content/uploads/2022/12/pexels-yan-krukov-8617763.jpg",
     },
     {
-      "NAMA TUTOR": "Maria Olivia",
+      "Nama Tutor": "Maria Olivia",
       "Bidang Studi": "Manajemen",
       "Hobi": "Traveling",
       "Pendidikan": "Magister Manajemen",

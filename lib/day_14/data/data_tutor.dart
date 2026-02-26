@@ -1,28 +1,44 @@
-import 'package:joshuaproject/day_14/models/model_tutor..dart';
+import 'package:joshuaproject/day_14/models/pokemon_model.dart';
 
-final List<Tutor> tutorList = [
-  Tutor(
-    namaTutor: "Keisyha Wijaya Salim",
-    bidangStudi: "Bisnis",
+class DataTutor {
+  final String name;
+  final String bidangstudi;
+  final String hobi;
+  final String pendidikan;
+  final String imageUrl;
+
+  DataTutor({
+    required this.name,
+    required this.bidangstudi,
+    required this.hobi,
+    required this.pendidikan,
+    required this.imageUrl,
+  });
+}
+
+final List<DataTutor> tutorList = [
+  DataTutor(
+    name: "Keisyha Wijaya Salim",
+    bidangstudi: "Bisnis",
     hobi: "Nonton Drakor",
     pendidikan: "Sarjana Manajemen",
-    gambar:
-        "https://st2.depositphotos.com/4431055/11861/i/950/depositphotos_118613376-stock-photo-young-male-teacher.jpg",
+    imageUrl:
+        "https://media.istockphoto.com/id/1473839183/id/foto/wanita-muda-asia-yang-tersenyum-cantik-berusia-sekitar-25-tahun-dengan-kemeja-cokelat-wanita.jpg",
   ),
-  Tutor(
-    namaTutor: "Andi Pratama",
-    bidangStudi: "Akuntansi",
+  DataTutor(
+    name: "Andi Pratama",
+    bidangstudi: "Akuntansi",
     hobi: "Membaca Buku",
     pendidikan: "Sarjana Akuntansi",
-    gambar:
-        "https://st2.depositphotos.com/4431055/11861/i/950/depositphotos_118613376-stock-photo-young-male-teacher.jpg",
+    imageUrl:
+        "https://www.quipper.com/id/blog/wp-content/uploads/2022/12/pexels-yan-krukov-8617763.jpg",
   ),
-  Tutor(
-    namaTutor: "Maria Olivia",
-    bidangStudi: "Manajemen",
+  DataTutor(
+    name: "Maria Olivia",
+    bidangstudi: "Manajemen",
     hobi: "Olahraga Pagi",
     pendidikan: "Magister Manajemen",
-    gambar:
-        "https://st2.depositphotos.com/4431055/11861/i/950/depositphotos_118613376-stock-photo-young-male-teacher.jpg",
+    imageUrl:
+        "https://akcdn.detik.net.id/visual/2025/12/19/ilustrasi-awet-muda-1766148279919_11.jpeg?w=720&q=90",
   ),
 ];
