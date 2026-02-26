@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:joshuaproject/Day_15/tugas10.dart';
 import 'package:joshuaproject/day_14/list.dart';
 import 'package:joshuaproject/day_14/list_map.dart';
 import 'package:joshuaproject/day_14/model_tutor.dart';
@@ -23,6 +24,7 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
     ListViewBuilderDay14List(),
     ListMapPageTugas9(),
     ModelListViewBuilderDay14(),
+    Tugas10TextForm(),
   ];
 
   @override
@@ -61,6 +63,13 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
               title: Text("Model"),
               onTap: () {
                 ontapItemDrawer(2);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.ac_unit_outlined),
+              title: Text("Tugas 10"),
+              onTap: () {
+                ontapItemDrawer(3);
               },
             ),
           ],
