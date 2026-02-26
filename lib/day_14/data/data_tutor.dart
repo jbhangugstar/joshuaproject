@@ -23,7 +23,7 @@ final List<DataTutor> tutorList = [
     hobi: "Nonton Drakor",
     pendidikan: "Sarjana Manajemen",
     imageUrl:
-        "https://media.istockphoto.com/id/1473839183/id/foto/wanita-muda-asia-yang-tersenyum-cantik-berusia-sekitar-25-tahun-dengan-kemeja-cokelat-wanita.jpg",
+        "https://avatars.preply.com/i/logos/i/logos/avatar_facvevr7sw.jpg",
   ),
   DataTutor(
     name: "Andi Pratama",

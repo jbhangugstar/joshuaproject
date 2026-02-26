@@ -1,18 +1,18 @@
 import 'dart:convert';
 
-class DataGot {
+class DataTutor {
   final String fullName;
   final String title;
   final String imageUrl;
 
-  DataGot({
+  DataTutor({
     required this.fullName,
     required this.title,
     required this.imageUrl,
   });
 
-  factory DataGot.fromJson(Map<String, dynamic> json) {
-    return DataGot(
+  factory DataTutor.fromJson(Map<String, dynamic> json) {
+    return DataTutor(
       fullName: json['fullName'],
       title: json['title'],
       imageUrl: json['imageUrl'],

@@ -10,10 +10,10 @@ class ListMapPageTugas9 extends StatelessWidget {
       "Hobi": "Nonton Drakor",
       "Pendidikan": "Sarjana Manajemen",
       "foto":
-          "https://media.istockphoto.com/id/1473839183/id/foto/wanita-muda-asia-yang-tersenyum-cantik-berusia-sekitar-25-tahun-dengan-kemeja-cokelat-wanita.jpg?s=1024x1024&w=is&k=20&c=_bMd70VZOmRHrmXRTIIaFlpYAyrqgEeZFD7J4aMqvtM",
+          "https://avatars.preply.com/i/logos/i/logos/avatar_facvevr7sw.jpg",
     },
     {
-      "Nama tutor": "Andi Pratama",
+      "Nama Tutor": "Andi Pratama",
       "Bidang Studi": "Akuntansi",
       "Hobi": "Membaca Buku",
       "Pendidikan": "Sarjana Akuntansi",
@@ -47,17 +47,26 @@ class ListMapPageTugas9 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    tutor["NAMA TUTOR"],
+                    tutor["NAMA TUTOR"] ?? "Nama tidak tersedia",
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
                   ),
                   const SizedBox(height: 4),
-                  Text("Bidang Studi: ${tutor["Bidang Studi"]}"),
-                  Text("Hobi: ${tutor["Hobi"]}"),
-                  Text("Pendidikan: ${tutor["Pendidikan"]}"),
-                  Image.network(tutor["foto"] ?? ""),
+                  Text("Bidang Studi: ${tutor["Bidang Studi"] ?? "-"}"),
+                  Text("Hobi: ${tutor["Hobi"] ?? "-"}"),
+                  Text("Pendidikan: ${tutor["Pendidikan"] ?? "-"}"),
+
+                  const SizedBox(height: 8),
+
+                  tutor["foto"] != null && tutor["foto"] != ""
+                      ? Image.network(
+                          tutor["foto"],
+                          height: 120,
+                          fit: BoxFit.cover,
+                        )
+                      : const Text("Foto tidak tersedia"),
                 ],
               ),
             ),
