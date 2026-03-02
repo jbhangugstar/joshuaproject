@@ -1,4 +1,4 @@
-import 'package:joshuaproject/Day_16/Day_16/models/user_model.dart';
+import 'package:joshuaproject/Day_16/Day_17/models/user_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -7,12 +7,23 @@ class DBHelper {
     final dbPath = await getDatabasesPath();
     return openDatabase(
       join(dbPath, 'Brilliant_Education.db'),
-      onCreate: (db, version) {
-        return db.execute(
-          'CREATE TABLE user ( id INTEGER PRIMARY KEY AUTOINCREMENT , email TEXT, password TEXT)',
+      onCreate: (db, version) async {
+        await db.execute(
+          'CREATE TABLE user ( id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, password TEXT)',
+        );
+
+        await db.execute(
+          'CREATE TABLE tutor ( id INTEGER PRIMARY KEY AUTOINCREMENT, nama TEXT, no_hp TEXT, mata_pelajaran TEXT)',
         );
       },
-      version: 1,
+      version: 5,
+      onUpgrade: (db, oldVersion, newVersion) async {
+        if (oldVersion < 5) {
+          await db.execute(
+            'CREATE TABLE tutor ( id INTEGER PRIMARY KEY AUTOINCREMENT , nama TEXT, no_hp TEXT, mata_pelajaran TEXT)',
+          );
+        }
+      },
     );
   }
 

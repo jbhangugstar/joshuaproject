@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:joshuaproject/Day_15/homepage_tugas10.dart';
-import 'package:joshuaproject/Day_16/Day_16/Database/preference.dart';
-import 'package:joshuaproject/Day_16/Day_16/Database/sqflite.dart';
-import 'package:joshuaproject/Day_16/Day_16/models/user_model.dart';
+import 'package:joshuaproject/Day_16/Day_17/Database/preference.dart';
+import 'package:joshuaproject/Day_16/Day_17/Database/sqflite.dart';
+import 'package:joshuaproject/Day_16/Day_17/models/user_model.dart';
 import 'package:joshuaproject/day_14/drawer_global.dart';
 import 'package:joshuaproject/Extansion/navigator.dart';
 
@@ -195,48 +195,6 @@ class _LoginScreenDay16 extends State<LoginScreenDay16> {
           ),
         ),
       ),
-    );
-  }
-
-  Future<dynamic> dialogError(BuildContext context) {
-    return showDialog(
-      context: context,
-      builder: (_) {
-        return AlertDialog(
-          title: Text("Oops", style: TextStyle(fontSize: 24)),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text("Email yang anda masukkan salah"),
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        context.pop();
-                      },
-                      child: Text("Coba lagi"),
-                    ),
-                  ),
-
-                  SizedBox(width: 12),
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        context.pop();
-                        context.push(
-                          HomePageTugas10(text: emailController.text),
-                        );
-                      },
-                      child: Text("Lanjut"),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        );
-      },
     );
   }
 }

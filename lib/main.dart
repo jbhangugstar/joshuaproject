@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_16/Day_16/View/login_screen.dart';
-import 'package:joshuaproject/Day_16/Day_16/View/splash_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17/View/login_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17/View/splash_screen.dart';
 import 'package:joshuaproject/day_14/drawer_global.dart';
 import 'package:joshuaproject/day_14/list_map.dart';
 
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreenDay16(),
+      home: DrawerGlobalTugas9(),
     );
   }
 }

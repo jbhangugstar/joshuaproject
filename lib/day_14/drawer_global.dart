@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_15/tugas10.dart';
-import 'package:joshuaproject/Day_16/Day_16/View/login_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17/View/cr_tutor.dart';
+import 'package:joshuaproject/Day_16/Day_17/View/login_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17/View/tutor_screen.dart';
 import 'package:joshuaproject/day_14/list.dart';
 import 'package:joshuaproject/day_14/list_map.dart';
 import 'package:joshuaproject/day_14/model_tutor.dart';
@@ -25,7 +26,9 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
     ListViewBuilderDay14List(),
     ListMapPageTugas9(),
     ModelListViewBuilderDay14(),
-    Tugas10TextForm(),
+    LoginScreenDay16(),
+    CRTutorScreenDay17(),
+    TutorScreen(),
   ];
 
   @override
@@ -68,9 +71,24 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
             ),
             ListTile(
               leading: Icon(Icons.ac_unit_outlined),
-              title: Text("Tugas 10"),
+              title: Text("Login"),
               onTap: () {
                 ontapItemDrawer(3);
+              },
+            ),
+
+            ListTile(
+              leading: Icon(Icons.ac_unit_outlined),
+              title: Text("Formulir"),
+              onTap: () {
+                ontapItemDrawer(4);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.ac_unit_outlined),
+              title: Text("Brilliant  Education Tutor"),
+              onTap: () {
+                ontapItemDrawer(5);
               },
             ),
           ],
