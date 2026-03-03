@@ -14,10 +14,10 @@ class _TutorScreenState extends State<TutorScreen> {
 
   void initState() {
     super.initState();
-    getDataSiswa();
+    getDataTutor();
   }
 
-  Future<void> getDataSiswa() async {
+  Future<void> getDataTutor() async {
     await Future.delayed(Duration(seconds: 3));
     dataTutor = await TutorController.getAllTutor();
     setState(() {});

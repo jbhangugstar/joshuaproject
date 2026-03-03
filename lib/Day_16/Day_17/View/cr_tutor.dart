@@ -23,6 +23,7 @@ class _TutorScreenState extends State<CRTutorScreenDay17> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: 40),
               TextFormField(
                 controller: namaController,
                 decoration: decorationConstant(
