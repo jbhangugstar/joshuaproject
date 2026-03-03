@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_16/Day_17/View/cr_tutor.dart';
-import 'package:joshuaproject/Day_16/Day_17/View/login_screen.dart';
-import 'package:joshuaproject/Day_16/Day_17/View/tutor_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/View/cr_tutor.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/View/login_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/View/tutor_screen.dart';
 import 'package:joshuaproject/day_14/list.dart';
 import 'package:joshuaproject/day_14/list_map.dart';
 import 'package:joshuaproject/day_14/model_tutor.dart';
@@ -34,8 +34,18 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Brilliant Education")),
-
+      appBar: AppBar(
+        title: Text(
+          "BRILLIANT EDUCATION",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 188, 10, 224),
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -85,7 +95,7 @@ class _DrawerGlobalState extends State<DrawerGlobalTugas9> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.ac_unit_outlined),
+              leading: Icon(Icons.person_2_outlined),
               title: Text("Brilliant  Education Tutor"),
               onTap: () {
                 ontapItemDrawer(5);

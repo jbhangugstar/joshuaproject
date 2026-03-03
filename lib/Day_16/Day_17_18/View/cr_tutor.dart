@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_16/Day_17/Database/tutor_controller.dart';
-import 'package:joshuaproject/Day_16/Day_17/models/tutor_model.dart';
-import 'package:joshuaproject/Day_16/Day_17/utils/decoration_form.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/Database/tutor_controller.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/View/tutor_screen.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/models/tutor_model.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/utils/decoration_form.dart';
 import 'package:joshuaproject/Extansion/navigator.dart';
 
 class CRTutorScreenDay17 extends StatefulWidget {
@@ -52,7 +53,7 @@ class _TutorScreenState extends State<CRTutorScreenDay17> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  child: Text("Daftar"),
+                  child: Text("Tambah Tutor"),
                   onPressed: () {
                     if (namaController.text.isEmpty) {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -95,7 +96,7 @@ class _TutorScreenState extends State<CRTutorScreenDay17> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    context.push(CRTutorScreenDay17());
+                    context.push(TutorScreen());
                   },
                   child: Text("Lihat Data Tutor"),
                 ),

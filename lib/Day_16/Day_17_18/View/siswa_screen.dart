@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_16/Day_17/Database/siswa_controller.dart';
-import 'package:joshuaproject/Day_16/Day_17/models/siswa_model.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/Database/siswa_controller.dart';
+import 'package:joshuaproject/Day_16/Day_17_18/models/siswa_model.dart';
 
 class SiswaScreen extends StatefulWidget {
   const SiswaScreen({super.key});
