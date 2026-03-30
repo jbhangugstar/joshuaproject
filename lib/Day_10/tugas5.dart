@@ -13,7 +13,6 @@ class _Tugas5State extends State<Tugas5> {
   bool isVisible = false;
   bool isIconActive = false;
   String? selectedButton;
-  int _selectedIndex = 0;
 
   void decrement() {
     _counter--;
@@ -165,7 +164,7 @@ class _Tugas5State extends State<Tugas5> {
             ],
           ),
 
-          Container(
+          SizedBox(
             height: 60,
             child: GestureDetector(
               onTap: () {
@@ -202,6 +201,5 @@ class _Tugas5State extends State<Tugas5> {
         ],
       ),
     );
-    ;
   }
 }

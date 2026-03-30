@@ -49,6 +49,7 @@ class _Tugas10TextFormState extends State<Tugas10TextForm> {
                 if (value == null || value.isEmpty) {
                   return "Nama wajib diisi";
                 }
+                return null;
               }, //value
             ),
 

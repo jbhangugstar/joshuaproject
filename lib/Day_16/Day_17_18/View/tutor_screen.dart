@@ -14,6 +14,7 @@ class TutorScreen extends StatefulWidget {
 class _TutorScreenState extends State<TutorScreen> {
   late List<TutorModel> dataTutor = [];
 
+  @override
   void initState() {
     super.initState();
     getDataTutor();
@@ -30,7 +31,7 @@ class _TutorScreenState extends State<TutorScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Padding(
-          padding: const EdgeInsets.all(50.0),
+          padding: const EdgeInsets.all(8.0),
           child: Text(
             "BRILLIANT EDUCATION TUTOR",
             style: TextStyle(

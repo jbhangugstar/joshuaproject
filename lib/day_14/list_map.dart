@@ -47,7 +47,7 @@ class ListMapPageTugas9 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    tutor["NAMA TUTOR"] ?? "Nama tidak tersedia",
+                    ("Nama Tutor: ${tutor["Nama Tutor"] ?? "-"}"),
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,

@@ -59,11 +59,11 @@ extension ExtendedNavigator on BuildContext {
         builder: (_) => page,
         settings: RouteSettings(name: name ?? page.runtimeType.toString()),
       ),
-      (route) => false,
+      (Route<dynamic> route) => false,
     );
   }
 
-  void pop([result]) async {
+  void pop([dynamic result]) async {
     return Navigator.of(this).pop(result);
   }
 }

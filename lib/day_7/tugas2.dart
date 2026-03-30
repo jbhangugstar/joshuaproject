@@ -143,11 +143,7 @@ class Day7Screen extends StatelessWidget {
             ),
 
             SizedBox(height: 20),
-            Container(
-              child: Center(
-                child: Image.asset("assets/images/anak_belajar.jpg"),
-              ),
-            ),
+            Center(child: Image.asset("assets/images/anak_belajar.jpg")),
           ],
         ),
       ),

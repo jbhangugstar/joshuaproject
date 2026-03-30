@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:joshuaproject/Day_11/tugas6_homepage.dart';
 import 'package:joshuaproject/Day_11/tugas6_homepage2.dart';
@@ -77,24 +76,22 @@ class Tugas6Login extends StatelessWidget {
             ),
 
             SizedBox(height: 20),
-            Container(
-              child: ElevatedButton(
-                onPressed: () {
-                  context.push(Tugas6HomePage2());
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  minimumSize: const Size(double.infinity, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
-                  ),
+            ElevatedButton(
+              onPressed: () {
+                context.push(Tugas6HomePage2());
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                minimumSize: const Size(double.infinity, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(100),
                 ),
-                child: const Text(
-                  "Login",
-                  style: TextStyle(
-                    color: Color(0xFF0A2A5A),
-                    fontWeight: FontWeight.bold,
-                  ),
+              ),
+              child: const Text(
+                "Login",
+                style: TextStyle(
+                  color: Color(0xFF0A2A5A),
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

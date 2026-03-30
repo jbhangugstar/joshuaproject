@@ -1,4 +1,3 @@
-import 'package:joshuaproject/day_14/models/pokemon_model.dart';
 
 class DataTutor {
   final String name;

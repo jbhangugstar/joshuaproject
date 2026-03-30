@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:joshuaproject/Day_11/tugas6_homepage.dart';
 import 'package:joshuaproject/Day_12/about.dart';
-import 'package:joshuaproject/Day_12/checkboxpage.dart';
-import 'package:joshuaproject/Day_12/datepickerpage.dart';
-import 'package:joshuaproject/Day_12/dropdownpage.dart';
-import 'package:joshuaproject/Day_12/switchpage.dart';
-import 'package:joshuaproject/Day_12/timepickerpage.dart';
 import 'package:joshuaproject/Day_12/tugas7.dart';
 
 class Tugas8Flutter extends StatefulWidget {

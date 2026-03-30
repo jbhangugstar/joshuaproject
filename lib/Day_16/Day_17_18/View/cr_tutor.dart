@@ -6,8 +6,9 @@ import 'package:joshuaproject/Day_16/Day_17_18/utils/decoration_form.dart';
 import 'package:joshuaproject/Extansion/navigator.dart';
 
 class CRTutorScreenDay17 extends StatefulWidget {
-  CRTutorScreenDay17({super.key});
+  const CRTutorScreenDay17({super.key});
 
+  @override
   State<CRTutorScreenDay17> createState() => _TutorScreenState();
 }
 
@@ -121,13 +122,13 @@ class _TutorScreenState extends State<CRTutorScreenDay17> {
         if (!snapshot.hasData) {
           return CircularProgressIndicator();
         }
-        final DataTutor = snapshot.data as List<TutorModel>;
+        final dataTutor = snapshot.data as List<TutorModel>;
         return ListView.builder(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          itemCount: DataTutor.length,
+          itemCount: dataTutor.length,
           itemBuilder: (BuildContext context, int index) {
-            final items = DataTutor[index];
+            final items = dataTutor[index];
             return ListTile(
               title: Text(items.nama),
               subtitle: Text(items.mataPelajaran),

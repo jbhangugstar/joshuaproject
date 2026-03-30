@@ -53,6 +53,7 @@ class _LoginScreenDay16 extends State<LoginScreenDay16> {
                   if (value == null || value.isEmpty) {
                     return "Nama wajib diisi";
                   }
+                  return null;
                 }, //value
               ),
 
