@@ -20,10 +20,21 @@ class _Tugas14ScreenState extends State<Tugas14Screen> {
   @override
   void initState() {
     super.initState();
-    futureProduk = ProductService.fetchProducts();
+    futureProduk = ProductService.fetchProducts().then((list) {
+      allProduk = list;
+      filteredProduk = List.from(list);
+      return list;
+    });
   }
 
   void filterSearch(String query) {
+    if (query.isEmpty) {
+      setState(() {
+        filteredProduk = List.from(allProduk);
+      });
+      return;
+    }
+
     final result = allProduk.where((produk) {
       final title = produk.title?.toLowerCase() ?? "";
       final category = produk.category?.toLowerCase() ?? "";
@@ -70,9 +81,8 @@ class _Tugas14ScreenState extends State<Tugas14Screen> {
             return const Center(child: Text("Data produk kosong"));
           }
 
-          allProduk = snapshot.data!;
-          if (filteredProduk.isEmpty && searchController.text.isEmpty) {
-            filteredProduk = allProduk;
+          if (filteredProduk.isEmpty && snapshot.data != null) {
+            filteredProduk = List.from(snapshot.data!);
           }
 
           return Padding(
@@ -108,6 +118,7 @@ class _Tugas14ScreenState extends State<Tugas14Screen> {
                   child: ListView.builder(
                     itemCount: filteredProduk.length,
                     itemBuilder: (context, index) {
+                      print('Building item $index');
                       final produk = filteredProduk[index];
                       return ProductCard(
                         produk: produk,
