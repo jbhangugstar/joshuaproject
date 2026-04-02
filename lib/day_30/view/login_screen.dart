@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import '../api/auth_service.dart';
 import 'register_screen.dart';
@@ -40,10 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
         email: emailController.text,
         password: passwordController.text,
       );
-
+      log(result?.message ?? "");
       if (!mounted) return;
 
-      if (result.token != null) {
+      if (result != null && result.data?.token != null) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text(result.message ?? 'Login berhasil')),
         );

@@ -11,7 +11,7 @@ Future<GetUserModel> getUser() async {
   final token = prefs.getString('token');
 
   final response = await http.get(
-    Uri.parse(Endpoint.baseUrl),
+    Uri.parse(Endpoint.user),
     headers: {"Accept": "application/json", "Authorization": "Bearer $token"},
   );
 

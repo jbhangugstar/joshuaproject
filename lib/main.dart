@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:joshuaproject/Day_16/Day_17_18/Database/preference.dart';
-import 'package:joshuaproject/Day_29/view/Tugas14.dart';
 import 'package:joshuaproject/day_30/view/login_screen.dart';
 
 void main() async {

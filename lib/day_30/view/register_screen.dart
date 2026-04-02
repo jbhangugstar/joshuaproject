@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:joshuaproject/day_30/view/profile_screen.dart';
 import '../api/auth_service.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -14,6 +15,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final passwordC = TextEditingController();
 
   bool isLoading = false;
+  bool isPasswordVisible = false;
 
   Future<void> registerUser() async {
     setState(() => isLoading = true);
@@ -25,11 +27,34 @@ class _RegisterScreenState extends State<RegisterScreen> {
         password: passwordC.text,
       );
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(result.message ?? 'Register berhasil')),
-      );
+      if (result != null) {
+        // Setelah register berhasil, langsung login
+        final loginResult = await AuthService.login(
+          email: emailC.text,
+          password: passwordC.text,
+        );
 
-      Navigator.pop(context);
+        if (loginResult != null && loginResult.data?.token != null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                loginResult.message ?? 'Register dan login berhasil',
+              ),
+            ),
+          );
+
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (_) => const ProfileScreen()),
+            (route) => false,
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Register berhasil, silakan login')),
+          );
+          Navigator.pop(context);
+        }
+      }
     } catch (e) {
       ScaffoldMessenger.of(
         context,
@@ -51,6 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     String label,
     TextEditingController controller, {
     bool obscure = false,
+    Widget? suffixIcon,
   }) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -59,6 +85,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         obscureText: obscure,
         decoration: InputDecoration(
           labelText: label,
+          suffixIcon: suffixIcon,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
         ),
       ),
@@ -75,7 +102,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
           children: [
             buildTextField('Nama', nameC),
             buildTextField('Email', emailC),
-            buildTextField('Password', passwordC, obscure: true),
+            buildTextField(
+              'Password',
+              passwordC,
+              obscure: !isPasswordVisible,
+              suffixIcon: IconButton(
+                icon: Icon(
+                  isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                ),
+                onPressed: () {
+                  setState(() {
+                    isPasswordVisible = !isPasswordVisible;
+                  });
+                },
+              ),
+            ),
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: isLoading ? null : registerUser,
